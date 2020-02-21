@@ -1,19 +1,20 @@
 const mongoose = require ('mongoose');
 
-const Cliente = mongoose.model('Cliente', 
+const Autor = mongoose.model('Autor', 
   { nombre: String, apellidos: String }
 );
 
-const Articulo = mongoose.model('Articulo',
+const Obra = mongoose.model('Obra',
     new mongoose.Schema({ nombre: String, precio: Number })
 );
 
 module.exports = {
-    Cliente: Cliente,
-    Articulo: Articulo
+  Autor: Autor,
+  Obra: Obra
 }
 
 // module.exports = {
 //     Cliente,
 //     Articulo
 // }
+//library.autor
