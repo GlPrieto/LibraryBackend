@@ -13,8 +13,4 @@ module.exports = {
   Obra: Obra
 }
 
-// module.exports = {
-//     Cliente,
-//     Articulo
-// }
 //library.autor

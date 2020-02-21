@@ -25,7 +25,7 @@ exports.deleteAutor = (req, res) => {
 exports.updateAutor = (req, res) => {
     Autor.findOneAndUpdate(
         { _id: req.params.id },
-        { $set: { nombre: req.body.nombre, apellidos: req.body.apellidos } }, 
+        { $set: { autorID: req.body.autorID, nombre: req.body.nombre, apellidos: req.body.apellidos, epoca: req.body.epoca } }, 
         (err, data) => {
             if (err) res.json({ error: err });
             else res.json(data);
@@ -34,7 +34,7 @@ exports.updateAutor = (req, res) => {
 }
 
 exports.createAutor = (req, res) => {
-    const autor = new Cliente({ nombre: req.body.nombre, apellidos: req.body.apellidos });
+    const autor = new Cliente({ autorID: req.body.autorID, nombre: req.body.nombre, apellidos: req.body.apellidos, epoca: req.body.epoca });
     autor.save((err, data) => {
         if (err) res.json({ error: err });
         else res.json(data);
@@ -67,7 +67,7 @@ exports.deleteObra = (req, res) => {
 exports.updateObra = (req, res) => {
     Obra.findOneAndUpdate(
         { _id: req.params.id },
-        { $set: { nombre: req.body.nombre, precio: req.body.precio } }, 
+        { $set: { obraId: req.body.obraId, nombre: req.body.nombre, fechaPublicacion: req.body.fechaPublicacion, genero: req.body.genero } }, 
         (err, data) => {
             if (err) res.json({ error: err });
             else res.json(data);
@@ -76,7 +76,7 @@ exports.updateObra = (req, res) => {
 }
 
 exports.createObra = (req, res) => {
-    const obra = new Articulo({ nombre: req.body.nombre, precio: req.body.precio });
+    const obra = new Obra({ obraId: req.body.obraId, nombre: req.body.nombre, fechaPublicacion: req.body.fechaPublicacion, genero: req.body.genero });
     obra.save((err, data) => {
         if (err) res.json({ error: err });
         else res.json(data);

@@ -8,7 +8,7 @@ const router = express.Router();
 
 // --------------- API REST CRUD
 
-router.get    ("/autores",      cors(), controller.readAutores);   // Read All
+router.get    ("/autores",      cors(), controller.listAutores);   // Read All
 router.get    ("/autores/:id",  cors(), controller.readAutor);    // Read
 router.delete ("/autores/:id",  cors(), controller.deleteAutor);  // Delete
 router.put    ("/autores/:id",  cors(), controller.updateAutor);  // Update
