@@ -1,11 +1,11 @@
 const mongoose = require ('mongoose');
 
 const Autor = mongoose.model('Autor', 
-  { nombre: String, apellidos: String }
+  { autorID: Number, nombre: String, apellidos: String, epoca: String}
 );
 
 const Obra = mongoose.model('Obra',
-    new mongoose.Schema({ nombre: String, precio: Number })
+    new mongoose.Schema({ obraID: Number, nombre: String, fechaPublicacion: Number, genero: String})
 );
 
 module.exports = {
