@@ -1,6 +1,7 @@
 # BACKEND (con Node, Express y MongoDB)
 
 > **Parte del proyecto final de la asignatura DAW**
+> **Referencia: https://github.com/jamj2000/tiendabackend**
 
 https://dashboard.heroku.com/apps/librarygpbackend
 
