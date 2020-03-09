@@ -1,6 +1,6 @@
 const { Autor, Obra } = require("./models.js");
 
-
+//Autors
 exports.listAutores = (req, res) => {
     Autor.find({}, (err, data) => {
         if (err) res.json({ error: err });
@@ -41,7 +41,7 @@ exports.createAutor = (req, res) => {
     });
 }
 
-// ------ OBRAS
+//OBRAS
 
 exports.readObras = (req, res) => {
     Obra.find({}, (err, data) => {
